@@ -77,12 +77,6 @@ jobs:
         sudo cat >./tvbsnews.m3u8 <<EOL
         $(youtube-dl -g https://www.youtube.com/watch?v=V0WxUakDV7M)
         EOL
-    - name: Get cctv4.m3u8
-      run: |
-        touch ./cctv4.m3u8
-        sudo cat >./cctv4.m3u8 <<EOL
-        $(youtube-dl -g https://www.youtube.com/user/ChineseInternatioify/live)
-        EOL
     - name: Get eftv.m3u8
       run: |
         touch ./eftv.m3u8
