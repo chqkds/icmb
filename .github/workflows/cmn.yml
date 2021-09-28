@@ -95,7 +95,7 @@ jobs:
         sudo cat >./ctinews.m3u8 <<EOL
         $(youtube-dl -g https://www.youtube.com/watch?v=lu_BJKxqGnk)
         EOL
-    - name: Get gstv.m3u8
+    - name: Get tvbszh.m3u8
       run: |
         touch ./tvbszh.m3u8
         sudo cat >./tvbszh.m3u8 <<EOL
