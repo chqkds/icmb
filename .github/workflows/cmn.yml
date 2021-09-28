@@ -77,12 +77,6 @@ jobs:
         sudo cat >./tvbsnews.m3u8 <<EOL
         $(youtube-dl -g https://www.youtube.com/watch?v=V0WxUakDV7M)
         EOL
-    - name: Get eftv.m3u8
-      run: |
-        touch ./eftv.m3u8
-        sudo cat >./eftv.m3u8 <<EOL
-        $(youtube-dl -g https://www.youtube.com/user/EFTV01/live)
-        EOL
     - name: Get dscj.m3u8
       run: |
         touch ./dscj.m3u8
