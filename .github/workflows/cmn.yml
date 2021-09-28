@@ -116,9 +116,9 @@ jobs:
         EOL
     - name: Get gstv.m3u8
       run: |
-        touch ./gstv.m3u8
-        sudo cat >./gstv.m3u8 <<EOL
-        $(youtube-dl -g https://www.youtube.com/channel/UCoo-jAsJgM8z09ddlhcBlSA/live)
+        touch ./tvbs.m3u8
+        sudo cat >./tvbs.m3u8 <<EOL
+        $(youtube-dl -g https://www.youtube.com/watch?v=hP6_jfCFxyQ)
         EOL
     - name : Upload artifact
       uses: actions/upload-artifact@master
