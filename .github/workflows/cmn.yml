@@ -83,12 +83,6 @@ jobs:
         sudo cat >./dscj.m3u8 <<EOL
         $(youtube-dl -g https://www.youtube.com/watch?v=ABn_ccXn_jc)
         EOL
-    - name: Get sdtv.m3u8
-      run: |
-        touch ./sdtv.m3u8
-        sudo cat >./sdtv.m3u8 <<EOL
-        $(youtube-dl -g https://www.youtube.com/channel/UCrVBXIxpYnjTk4ezn9F-fug/live)
-        EOL
     - name: Get ctsshow.m3u8
       run: |
         touch ./ctsshow.m3u8
