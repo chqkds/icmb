@@ -1,16 +1,17 @@
 name: Get YouTube Live m3u8
 on:
   schedule:
-    - cron: "0 */2 * * *"
+    - cron: "0 */5 * * *"
   workflow_dispatch:
 jobs:
   build:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
-    - name: Install youtube-dl
+    - name: Install yt-dlp
       run: |
-        sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
-        sudo chmod a+rx /usr/local/bin/youtube-dl
+        sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
+        sudo chmod a+rx /usr/local/bin/yt-dlp
+
     - name: Get ctitv.m3u8
       run: |
         touch ./ctitv.m3u8
